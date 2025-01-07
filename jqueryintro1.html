@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> -->
+    <style>
+        .box {
+            height: 200px;
+            width: 300px;
+            background-color: aquamarine;
+        }
+
+        #show {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="hide" class="abc">Hide</button>
+    <button id="show" class="abc">Show</button>
+    <button id="toggle" class="abc">toggle</button>
+    <div class="box"></div>
+
+
+    <h1 class="h1">Hello 1</h1>
+    <h1 class="h1">Hello 2</h1>
+    <h1 class="h1">Hello 3</h1>
+    <h1 class="h1">Hello 4</h1>
+
+    <input type="text" id="inp">
+
+    <script>
+
+        $('#hide').mouseout(function () {
+            $('.box').hide(1000, function () {
+                $('#hide').css('display', 'none')
+                $('#show').css('display', 'block')
+            })
+            // alert("box is hidden now")s
+        })
+        $('#show').mouseout(function () {
+            $('.box').show(1000, function () {
+                $('#show').css('display', 'none')
+                $('#hide').css('display', 'block')
+                // alert("box is display now")
+            })
+        })
+
+
+        $('#toggle').click(function () {
+            $('.box').toggle(1000)
+        })
+
+
+        $('.h1').click(function () {
+            $(this).hide()
+        })
+
+        $('#inp').keypress(function(){
+            // $('#inp').css('color','red')
+            // $('#inp').css('border','1px solid green')
+
+            $('#inp').css(
+                {
+                    'color':'red',
+                    'border': '1px solid green'
+
+                }
+            )
+        })
+
+    </script>
+</body>
+
+</html>
