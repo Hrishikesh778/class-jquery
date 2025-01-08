@@ -24,6 +24,11 @@
     <button id="hide" class="abc">Hide</button>
     <button id="show" class="abc">Show</button>
     <button id="toggle" class="abc">toggle</button>
+    <button id="slideUp">slideUp</button>
+    <button id="slideDown">slideDown</button>
+    <button id="slideToggle">slideToggle</button>
+
+
     <div class="box"></div>
 
 
@@ -73,6 +78,19 @@
                 }
             )
         })
+
+        $('#slideUp').click(function(){
+            $('.box').slideUp()
+        })
+
+        $('#slideDown').click(function(){
+            $('.box').slideDown()
+        })
+
+        $('#slideToggle').click(function(){
+            $('.box').slideToggle()
+        })
+
 
     </script>
 </body>

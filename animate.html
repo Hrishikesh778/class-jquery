@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.js"></script>
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            background-color: aquamarine;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="animationStart">animation Start</button>
+    <button id="animationStop">animation Stop</button>
+    <div class="box"></div>
+
+
+    <script>
+
+        $('#animationStop').click(function () {
+            $('.box').stop(true)
+        })
+
+
+        $('#animationStart').click(function () {
+            $('.box').animate(
+                {
+                    top: '0px',
+                    left: '200px',
+                    width: 'toggle'
+                    // width: '+=400px',
+                    // height: '+=400px'
+                }
+            )
+            $('.box').animate(
+                {
+                    top: '200px',
+                    left: '200px'
+                }
+            )
+            $('.box').animate(
+                {
+                    top: '200px',
+                    left: '0px'
+                }
+            )
+            $('.box').animate(
+                {
+                    top: '0px',
+                    left: '0px'
+                }
+            )
+
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>
