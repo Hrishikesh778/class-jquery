@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <input type="text" id="inp">
+    <h1 id="heading">Hello <i>Duniya</i></h1>
+
+    <button id="btn">Click here</button>
+    <button id="rClass">remove Class</button>
+    <button id="tClass">toggle Class</button>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#btn').click(function () {
+                // data = $('#inp').val() //to get value
+                // data = $('#heading').text() //to get text
+                // data = $('#heading').html()// to get html
+                // data = $('#heading').html("Hello <i>Rahul</i>") //to set value
+                // data = $('#heading').text("Hello <i>Rahul</i>")//to set text
+                // data = $('#inp').val("Hello Rahul") //to set input value
+                // $('#inp').attr('placeholder', "Enter") //to set place attribute
+                data = $('#heading').addClass('abc') //to add class
+                console.log(data, "data")
+
+            })
+
+
+            $('#rClass').click(function(){
+                data = $('#heading').removeClass() // to remove class
+                // $('#inp').removeAttr('placeholder')//to remove attribute
+
+            })
+
+            $('#tClass').click(function(){
+                $('#heading').toggleClass('abc') //to toggle class
+           })
+        })
+
+
+    </script>
+</body>
+
+</html>

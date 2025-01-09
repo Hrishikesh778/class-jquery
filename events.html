@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <button id="hover">hover</button>
+    <button id="on">On</button>
+    <script>
+
+        $(document).ready(function () {
+
+            $("#abc").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "lightgray");
+                    $(this).css("color", "red");
+                },
+                mouseleave: function () {
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function () {
+                    $(this).css("background-color", "yellow");
+                }
+            });
+
+
+            $('#on').on(
+                {
+                    click: function(){
+                        $('#on').css('color','red')
+                    },
+                    mouseenter: function(){
+                        $('#on').css('color','green')
+                    },
+                    mouseleave: function(){
+                        $('#on').css('color', 'blue')
+                    },
+                    dblclick: function(){
+                        $('#on').css('color', 'yellow')
+                        
+                    }
+                }
+            )
+
+
+
+            // $('#hover').hover(
+            //     function () {
+            //         console.log('hover executed')
+            //     },
+            //     function () {
+            //         console.log('hover end')
+            //     }
+
+            // )
+
+
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>
