@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <div class="gParent">
+        <p>hello 1</p>
+        <p>hello 2</p>
+        <div class="pp">
+            <p>Hello3</p>
+            <div class="parent">
+                <p id="sun">Sunday</p>
+                <p>Monday</p>
+                <p>Tuesday</p><!-- dfnj -->
+
+                <p id="wed">wednesday</p>
+                <p>Thursday</p>
+                <p>Friday</p>
+                <p id="sat">Saturday</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // let data = $('.parent').children()
+        // let data = $('#wed').parents().css('border', "1px solid red")
+        // let data = $('.gParent').children().css('color', "red")
+        // let data = $('#wed').parentsUntil('.gParent').css('border', "1px solid red")
+        // let data = $('#wed').siblings().css('border', "1px solid red")
+        // let data = $('#wed').next().css('border', "1px solid red")
+        // let data = $('#wed').nextAll().css('border', "1px solid red")
+        // let data = $('#wed').prev().css('border', "1px solid red")
+        let data = $('#wed').nextUntil('#sat').css('border', "1px solid red")
+
+        console.log(data, "data")
+
+
+    </script>
+</body>
+
+</html>
